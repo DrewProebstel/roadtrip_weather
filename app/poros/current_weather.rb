@@ -12,5 +12,4 @@ attr_reader :datetime, :sunrise, :sunset, :temperature, :feels_like, :humidity, 
   	@conditions = data[:weather][0][:description]
   	@icon = data[:weather][0][:icon]
   end
-
 end

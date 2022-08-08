@@ -9,5 +9,4 @@ attr_reader :date, :sunrise, :sunset, :max_temp, :min_temp, :conditions, :icon
   	@conditions = data[:weather][0][:description]
   	@icon = data[:weather][0][:icon]
   end
-
 end

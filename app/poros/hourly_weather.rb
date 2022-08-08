@@ -7,6 +7,4 @@ attr_reader :time, :temperature, :conditions, :icon
   	@conditions = data[:weather][0][:description]
   	@icon = data[:weather][0][:icon]
   end
-
-
 end
