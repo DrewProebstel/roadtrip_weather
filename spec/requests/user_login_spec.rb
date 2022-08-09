@@ -1,15 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe 'log in a user end point' do
-  it 'creates a user' do
+  it 'returns a user with good credentials' do
     User.create(email:"drew@gmail.com", password: "test", password_confirmation: "test")
     headers = {
               "email": "drew@gmail.com",
-              "password": "text",
+              "password": "test",
               }
 
 
-    post "/api/v1/session", params: headers
+    post "/api/v1/sessions", params: headers
 
     expect(response).to be_successful
 
@@ -20,5 +20,24 @@ RSpec.describe 'log in a user end point' do
     expect(created[:data][:attributes][:email]).to be_a(String)
     expect(created[:data][:type]).to eq("users")
     expect(created[:data][:id]).to be_a(Integer)
+  end
+
+  it 'returns an error with bad credentials' do
+    User.create(email:"drew@gmail.com", password: "test", password_confirmation: "test")
+    headers = {
+              "email": "drew@gmail.com",
+              "password": "wrongo",
+              }
+
+
+    post "/api/v1/sessions", params: headers
+
+    expect(response).to_not be_successful
+
+
+    created = JSON.parse(response.body, symbolize_names: true)
+
+    expect(created[:error]).to eq("Bad email or password")
+
   end
 end

@@ -211,6 +211,7 @@
           1,
           1,
           1,
+          1,
           null,
           null,
           null
@@ -260,6 +261,52 @@
           null
         ]
       },
+      "/Users/drewproebstel/turing/rmodule/whether_sweater/spec/requests/user_login_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/drewproebstel/turing/rmodule/whether_sweater/spec/requests/user_registration_request_spec.rb": {
         "lines": [
           1,
@@ -280,6 +327,7 @@
           1,
           null,
           1,
+          null,
           1,
           1,
           1,
@@ -412,6 +460,51 @@
           null
         ]
       },
+      "/Users/drewproebstel/turing/rmodule/whether_sweater/app/controllers/api/v1/session_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          0,
+          null
+        ]
+      },
+      "/Users/drewproebstel/turing/rmodule/whether_sweater/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/drewproebstel/turing/rmodule/whether_sweater/app/serializers/users_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          2,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/drewproebstel/turing/rmodule/whether_sweater/app/controllers/api/v1/user_controller.rb": {
         "lines": [
           1,
@@ -430,35 +523,8 @@
           1,
           null
         ]
-      },
-      "/Users/drewproebstel/turing/rmodule/whether_sweater/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/Users/drewproebstel/turing/rmodule/whether_sweater/app/serializers/users_serializer.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1660020364
+    "timestamp": 1660073362
   }
 }
