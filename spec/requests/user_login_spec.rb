@@ -37,7 +37,7 @@ RSpec.describe 'log in a user end point' do
 
     created = JSON.parse(response.body, symbolize_names: true)
 
-    expect(created[:error]).to eq("Bad email or password")
+    expect(created[:error]).to eq("bad email or password")
 
   end
 end

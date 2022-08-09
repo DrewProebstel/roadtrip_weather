@@ -1,6 +1,12 @@
 class User < ApplicationRecord
   has_secure_password
+  before_create :api_key_create
+
 
   validates :email, presence: true
   validates_uniqueness_of :email
+
+  def api_key_create
+    self.api_key = SecureRandom.base64(27)
+  end
 end
