@@ -14,7 +14,7 @@ map_quest_api_key: "YOUR KEY"
 <li> Run $rails db:{create,migrate} </li>
   
 <h2> End Points </h2>
-  
+  <h4> Forecast for a location</h4>
   ```
   GET /api/v1/forecast?location=denver,Co
   ```
@@ -51,7 +51,7 @@ map_quest_api_key: "YOUR KEY"
 ```
   
   
-  
+<h4> Create a user</h4>
 ```
   POST /api/v1/users
 Content-Type: application/json
@@ -80,7 +80,7 @@ body:
 ```
   
   
-  
+<h4> Start a Session </h4>
 ```
 POST /api/v1/sessions
 Content-Type: application/json
@@ -107,8 +107,8 @@ body:
 }
 ```
 
-  
-  
+
+<h4> Find Weather at ETA of a roadtrip</h4>  
 ```
 POST /api/v1/road_trip
 Content-Type: application/json
