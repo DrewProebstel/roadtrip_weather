@@ -6,6 +6,6 @@ class MapQuestFacade
 
   def self.find_drive_time(from, to)
     data = MapQuestService.get_drive_time(from,to)
-    data[:route][:realTime]
+    data[:route][:time]
   end
 end
