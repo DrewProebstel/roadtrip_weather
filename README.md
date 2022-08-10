@@ -15,7 +15,7 @@ map_quest_api_key: "YOUR KEY"
   
 <h2> End Points </h2>
   <h4> Forecast for a location</h4>
-  ```
+
   GET /api/v1/forecast?location=denver,Co
 
   {
@@ -47,11 +47,11 @@ map_quest_api_key: "YOUR KEY"
     }
   }
 }
-```
+
   
   
 <h4> Create a user</h4>
-```
+
   POST /api/v1/users
 Content-Type: application/json
 Accept: application/json
@@ -61,8 +61,7 @@ Accept: application/json
   "password": "password",
   "password_confirmation": "password"
 }
-```
-```
+
   status: 201
 body:
 
@@ -76,11 +75,11 @@ body:
     }
   }
 }
-```
+
   
   
 <h4> Start a Session </h4>
-```
+
 POST /api/v1/sessions
 Content-Type: application/json
 Accept: application/json
@@ -89,8 +88,7 @@ Accept: application/json
   "email": "whatever@example.com",
   "password": "password"
 }
-```
-```
+
 status: 200
 body:
 
@@ -104,11 +102,11 @@ body:
     }
   }
 }
-```
+
 
 
 <h4> Find Weather at ETA of a roadtrip</h4>  
-```
+
 POST /api/v1/road_trip
 Content-Type: application/json
 Accept: application/json
@@ -120,8 +118,8 @@ body:
   "destination": "Pueblo,CO",
   "api_key": "jgn983hy48thw9begh98h4539h4"
 }
-```
-```
+
+ 
 {
   "data": {
     "id": null,
@@ -137,4 +135,4 @@ body:
     }
   }
 }
-```
+
