@@ -13,13 +13,11 @@ class RoadTrip
 
   def find_weather_by_seconds(seconds,weather)
     hours = (seconds.to_f/3600).round
-    if hours <= 48
+    if hours <= 47
       return {temperature: weather[:hourly_weather][hours].temperature, conditions: weather[:hourly_weather][hours].conditions}
-    elsif hours <= 168
+    else
       days = (hours.to_f/24).round
         return {temperature: weather[:daily_weather][days].max_temp, conditions: weather[:daily_weather][days].conditions}
-    else
-      return {temperature: weather[:daily_weather][7].max_temp, conditions: weather[:daily_weather][7].conditions}
     end
   end
 end
