@@ -16,37 +16,37 @@
 <h2> End Points </h2>
   <h4> Forecast for a location</h4>
 ```
-  GET /api/v1/forecast?location=denver,Co
+    GET /api/v1/forecast?location=denver,Co
 
-  {
-  "data": {
-    "id": null,
-    "type": "forecast",
-    "attributes": {
-      "current_weather": {
-        "datetime": "2020-09-30 13:27:03 -0600",
-        "temperature": 79.4,
-        etc
-      },
-      "daily_weather": [
-        {
-          "date": "2020-10-01",
-          "sunrise": "2020-10-01 06:10:43 -0600",
+    {
+    "data": {
+      "id": null,
+      "type": "forecast",
+      "attributes": {
+        "current_weather": {
+          "datetime": "2020-09-30 13:27:03 -0600",
+          "temperature": 79.4,
           etc
         },
-        {...} etc
-      ],
-      "hourly_weather": [
-        {
-          "time": "14:00:00",
-          "conditions": "cloudy with a chance of meatballs",
-          etc
-        },
-        {...} etc
-      ]
+        "daily_weather": [
+          {
+            "date": "2020-10-01",
+            "sunrise": "2020-10-01 06:10:43 -0600",
+            etc
+          },
+          {...} etc
+        ],
+        "hourly_weather": [
+          {
+            "time": "14:00:00",
+            "conditions": "cloudy with a chance of meatballs",
+            etc
+          },
+          {...} etc
+        ]
+      }
     }
   }
-}
 ```
   
 <h4> Create a user</h4>
