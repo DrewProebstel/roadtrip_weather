@@ -25,6 +25,30 @@ RSpec.describe 'road trip request' do
       expect(created[:data][:attributes][:weather_at_eta][:conditions]).to be_a(String)
     end
   end
+  it 'returns road trip information for multiple day trips' do
+    VCR.use_cassette("long_road_trip_request") do
+    User.create(email:"drew@gmail.com", password: "test", password_confirmation: "test", api_key: "1234567890")
+      headers = {
+                "origin": "Seattle,WA",
+                "destination": "Miami,FL",
+                "api_key": "1234567890"
+                }
+
+
+      post "/api/v1/road_trip", params: headers
+
+      expect(response).to be_successful
+
+      created = JSON.parse(response.body, symbolize_names: true)
+
+      expect(created[:data][:id]).to eq(nil)
+      expect(created[:data][:attributes][:start_city]).to eq("Seattle,WA")
+      expect(created[:data][:attributes][:end_city]).to eq("Miami,FL")
+      expect(created[:data][:attributes][:travel_time]).to be_a(String)
+      expect(created[:data][:attributes][:weather_at_eta][:temperature]).to be_a(Float)
+      expect(created[:data][:attributes][:weather_at_eta][:conditions]).to be_a(String)
+    end
+  end
   it 'returns road trip information differently if the trip is inpossible' do
     VCR.use_cassette("island_trip_request") do
     User.create(email:"drew@gmail.com", password: "test", password_confirmation: "test", api_key: "1234567890")
