@@ -22,4 +22,18 @@ RSpec.describe 'register  a user endpoint' do
     expect(created[:data][:type]).to eq("users")
     expect(created[:data][:id]).to be_a(Integer)
   end
+  it 'creates a user with bad params' do
+    headers = {
+              "email": "bobguy@example.com",
+              "password": "word",
+              "password_confirmation": "password"
+              }
+
+    user_count = User.all.length
+
+    post "/api/v1/users", params: headers
+
+    expect(response).to_not be_successful
+    expect(User.all.length).to eq(user_count)
+  end
 end

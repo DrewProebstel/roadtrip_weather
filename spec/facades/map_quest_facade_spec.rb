@@ -10,4 +10,12 @@ RSpec.describe MapQuestFacade do
       expect(results[:lng]).to eq(-71.056742)
     end
   end
+
+  it 'returns a drive time' do
+      VCR.use_cassette("map_quest_facade_drive_time") do
+    	results = MapQuestFacade.find_drive_time("boston,ma","albany,ny")
+
+    	expect(results).to be_a(Integer)
+    end
+  end
 end

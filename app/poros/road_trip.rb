@@ -17,9 +17,9 @@ class RoadTrip
       return {temperature: weather[:hourly_weather][hours].temperature, conditions: weather[:hourly_weather][hours].conditions}
     elsif hours <= 168
       days = (hours.to_f/24).round
-        return {temperature: weather[:daily_weather][days].temperature, conditions: weather[:daily_weather][days].conditions}
+        return {temperature: weather[:daily_weather][days].max_temp, conditions: weather[:daily_weather][days].conditions}
     else
-      return {temperature: weather[:daily_weather][7].temperature, conditions: weather[:daily_weather][7].conditions}
+      return {temperature: weather[:daily_weather][7].max_temp, conditions: weather[:daily_weather][7].conditions}
     end
   end
 end
