@@ -52,7 +52,7 @@
 ```
   
 <h4> Create a user</h4>
-```
+
  POST /api/v1/users
 Content-Type: application/json
 Accept: application/json
@@ -76,7 +76,7 @@ body:
     }
   }
  }
-```
+
   
   
 <h4> Start a Session </h4>
