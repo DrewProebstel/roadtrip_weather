@@ -17,8 +17,7 @@ map_quest_api_key: "YOUR KEY"
   <h4> Forecast for a location</h4>
   ```
   GET /api/v1/forecast?location=denver,Co
-  ```
-  ```
+
   {
   "data": {
     "id": null,
