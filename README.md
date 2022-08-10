@@ -18,6 +18,7 @@
 ```
   GET /api/v1/forecast?location=denver,Co
 ```
+  
   {
   "data": {
     "id": null,
