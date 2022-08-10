@@ -18,7 +18,6 @@ map_quest_api_key: "YOUR KEY"
   ```
   GET /api/v1/forecast?location=denver,Co
   ```
-
   ```
   {
   "data": {
@@ -50,6 +49,9 @@ map_quest_api_key: "YOUR KEY"
   }
 }
 ```
+  
+  
+  
 ```
   POST /api/v1/users
 Content-Type: application/json
@@ -76,6 +78,9 @@ body:
   }
 }
 ```
+  
+  
+  
 ```
 POST /api/v1/sessions
 Content-Type: application/json
@@ -101,6 +106,9 @@ body:
   }
 }
 ```
+
+  
+  
 ```
 POST /api/v1/road_trip
 Content-Type: application/json
