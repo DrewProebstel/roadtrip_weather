@@ -53,7 +53,8 @@
   
 <h4> Create a user</h4>
 
- POST /api/v1/users
+```
+POST /api/v1/users
 Content-Type: application/json
 Accept: application/json
 
@@ -76,11 +77,11 @@ body:
     }
   }
  }
-
-  
+```
   
 <h4> Start a Session </h4>
 
+```
 POST /api/v1/sessions
 Content-Type: application/json
 Accept: application/json
@@ -103,11 +104,12 @@ body:
     }
   }
 }
-
+```
 
 
 <h4> Find Weather at ETA of a roadtrip</h4>  
 
+```
 POST /api/v1/road_trip
 Content-Type: application/json
 Accept: application/json
@@ -136,4 +138,4 @@ body:
     }
   }
 }
-
+```
