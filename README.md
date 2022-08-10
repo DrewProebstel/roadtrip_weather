@@ -18,7 +18,7 @@
 
 ```
   GET /api/v1/forecast?location=denver,co
-```
+
   
   {
   "data": {
@@ -48,8 +48,8 @@
       ]
     }
   }
-}
-
+ }
+```
   
 <h4> Create a user</h4>
 
