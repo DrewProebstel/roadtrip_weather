@@ -47,7 +47,6 @@
     }
   }
 }
-```
   
   
 <h4> Create a user</h4>
