@@ -11,3 +11,10 @@
 weather_api_key: "YOUR KEY"
 map_quest_api_key: "YOUR KEY"
 ```
+<li> Run $rails db:{create,migrate} </li>
+  
+<h2> End Point </h2>
+  
+  ```
+  GET /api/v1/forecast?location=denver,Co
+  ```
