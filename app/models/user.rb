@@ -7,6 +7,8 @@ class User < ApplicationRecord
   validates_uniqueness_of :email
 
   def api_key_create
-    self.api_key = SecureRandom.base64(27)
+    if self.api_key == nil
+      self.api_key = SecureRandom.base64(27)
+    end
   end
 end
