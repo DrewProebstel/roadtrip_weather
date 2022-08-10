@@ -52,8 +52,8 @@
 ```
   
 <h4> Create a user</h4>
-
-  POST /api/v1/users
+```
+ POST /api/v1/users
 Content-Type: application/json
 Accept: application/json
 
@@ -75,8 +75,8 @@ body:
       "api_key": "jgn983hy48thw9begh98h4539h4"
     }
   }
-}
-
+ }
+```
   
   
 <h4> Start a Session </h4>
