@@ -8,8 +8,8 @@
 <li> Fill in the file as show 
 
 ```
-weather_api_key: "YOUR KEY"
-map_quest_api_key: "YOUR KEY"
+  weather_api_key: "YOUR KEY"
+  map_quest_api_key: "YOUR KEY"
 ```
 <li> Run $rails db:{create,migrate} </li>
   
