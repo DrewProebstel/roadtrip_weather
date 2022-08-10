@@ -15,8 +15,9 @@
   
 <h2> End Points </h2>
   <h4> Forecast for a location</h4>
+
 ```
-  GET /api/v1/forecast?location=denver,Co
+  GET /api/v1/forecast?location=denver,co
 ```
   
   {
