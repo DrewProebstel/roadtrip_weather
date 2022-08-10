@@ -15,9 +15,8 @@
   
 <h2> End Points </h2>
   <h4> Forecast for a location</h4>
-
+```
 GET /api/v1/forecast?location=denver,Co
-
 {
 "data": {
   "id": null,
@@ -47,7 +46,7 @@ GET /api/v1/forecast?location=denver,Co
   }
 }
 }
-
+```
   
 <h4> Create a user</h4>
 
