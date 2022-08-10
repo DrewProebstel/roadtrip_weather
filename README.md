@@ -17,6 +17,7 @@
   <h4> Forecast for a location</h4>
 ```
   GET /api/v1/forecast?location=denver,Co
+```
   {
   "data": {
     "id": null,
@@ -46,7 +47,7 @@
     }
   }
 }
-```
+
   
 <h4> Create a user</h4>
 
