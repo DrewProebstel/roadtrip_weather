@@ -25,4 +25,19 @@ RSpec.describe 'road trip request' do
       expect(created[:data][:attributes][:weather_at_eta][:conditions]).to be_a(String)
     end
   end
+  it 'returns returns an error with a bad api key' do
+    VCR.use_cassette("road_trip_request_bad_api") do
+    User.create(email:"drew@gmail.com", password: "test", password_confirmation: "test", api_key: "1234567890")
+      headers = {
+                "origin": "Denver,CO",
+                "destination": "Pueblo,CO",
+                "api_key": "turingschool"
+                }
+
+
+      post "/api/v1/road_trip", params: headers
+
+      expect(response).to_not be_successful
+    end
+  end
 end
