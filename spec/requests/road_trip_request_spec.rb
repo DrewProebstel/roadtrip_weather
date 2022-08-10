@@ -3,18 +3,18 @@ require 'rails_helper'
 RSpec.describe 'road trip request' do
   it 'returns road trip information' do
     VCR.use_cassette("road_trip_request") do
-    user=  User.create(email:"drew@gmail.com", password: "test", password_confirmation: "test", api_key: "1234567890")
+    User.create(email:"drew@gmail.com", password: "test", password_confirmation: "test", api_key: "1234567890")
       headers = {
                 "origin": "Denver,CO",
                 "destination": "Pueblo,CO",
-                "api_key": "jgn983hy48thw9begh98h4539h4"
+                "api_key": "1234567890"
                 }
 
 
       post "/api/v1/road_trip", params: headers
 
       expect(response).to be_successful
-      binding.pry
+
       created = JSON.parse(response.body, symbolize_names: true)
 
       expect(created[:data][:id]).to eq(nil)
