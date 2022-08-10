@@ -15,7 +15,7 @@ map_quest_api_key: "YOUR KEY"
   
 <h2> End Points </h2>
   <h4> Forecast for a location</h4>
-
+```
   GET /api/v1/forecast?location=denver,Co
 
   {
@@ -47,7 +47,7 @@ map_quest_api_key: "YOUR KEY"
     }
   }
 }
-
+```
   
   
 <h4> Create a user</h4>
